@@ -1,0 +1,13 @@
+
+{% extends 'common/base.html' %}
+{% load static %}
+{% block content %}
+<img src="{% static 'common/img/hello.png' %}">
+{% for post in p %}
+<h2>{{ post.title }}</h2>
+<h4>{{ post.created_on }}</h4>
+<h5>{{ post.author }}</h5>
+<p>{{ post.content }}</p><br>
+<a href="{% url 'test' %}">click me</a>
+{% endfor %}
+{% endblock %}

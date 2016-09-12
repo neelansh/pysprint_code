@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'common/css/bootstrap.min.css' %}">
+</head>
+<body>
+<nav class="navbar">
+	<ul>
+		<li>
+			<a href="{% url 'home' %}">home</a>
+		</li>
+		<li>
+			<a href="{% url 'test' %}">test</a>
+		</li>
+	</ul>
+
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>
